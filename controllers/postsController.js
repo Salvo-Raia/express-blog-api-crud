@@ -62,13 +62,23 @@ function modify(req, res) {
 }
 
 function destroy(req, res) {
-  const postId = req.params.id;
-  const responseData = {
-    result: `Post ${postId} delete`,
-    success: true,
-  };
+  const postId = parseInt(req.params.id);
+  const recipe = recipes.find((recipe) => recipe.id === postId);
 
-  res.json(responseData);
+  if (!recipe) {
+    const responseData = {
+      message: `Recipe ${postId} not found`,
+      success: false,
+    };
+
+    res.status(404).json(responseData);
+  }
+
+  recipes.splice(recipes.indexOf(recipe), 1);
+  console.log(
+    `Post ${postId} successfully deleted. Here you can find the updated posts list:`,
+    recipes,
+  );
+  res.sendStatus(204);
 }
-
 module.exports = { index, show, store, update, modify, destroy };
