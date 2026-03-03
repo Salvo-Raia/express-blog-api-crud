@@ -3,9 +3,9 @@ const recipes = require("../data/recipes");
 function index(req, res) {
   let filteredRecipes = recipes;
   const tagsSearchFilter = req.query.search;
-  const lowCaseSearchFilter = tagsSearchFilter.toLowerCase().trim();
 
   if (tagsSearchFilter) {
+    const lowCaseSearchFilter = tagsSearchFilter.toLowerCase().trim();
     filteredRecipes = recipes.filter((recipe) =>
       recipe.tags.some((tag) =>
         tag.toLowerCase().includes(lowCaseSearchFilter),
