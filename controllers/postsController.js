@@ -1,9 +1,20 @@
 const recipes = require("../data/recipes");
 
 function index(req, res) {
+  let filteredRecipes = recipes;
+  const tagsSearchFilter = req.query.search;
+  const lowCaseSearchFilter = tagsSearchFilter.toLowerCase().trim();
+
+  if (tagsSearchFilter) {
+    filteredRecipes = recipes.filter((recipe) =>
+      recipe.tags.some((tag) =>
+        tag.toLowerCase().includes(lowCaseSearchFilter),
+      ),
+    );
+  }
   const responseData = {
     message: "Index of all posts",
-    result: recipes,
+    result: filteredRecipes,
     success: true,
   };
 
