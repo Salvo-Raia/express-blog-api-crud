@@ -41,4 +41,34 @@ function store(req, res) {
   res.json(responseData);
 }
 
-module.exports = { index, show, store };
+function update(req, res) {
+  const postId = req.params.id;
+  const responseData = {
+    result: `Post ${postId} Update`,
+    success: true,
+  };
+
+  res.json(responseData);
+}
+
+function modify(req, res) {
+  const postId = req.params.id;
+  const responseData = {
+    result: `Post ${postId} partial update`,
+    success: true,
+  };
+
+  res.json(responseData);
+}
+
+function destroy(req, res) {
+  const postId = req.params.id;
+  const responseData = {
+    result: `Post ${postId} delete`,
+    success: true,
+  };
+
+  res.json(responseData);
+}
+
+module.exports = { index, show, store, update, modify, destroy };

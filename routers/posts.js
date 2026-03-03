@@ -12,36 +12,12 @@ router.get("/:id", postsController.show);
 router.post("/", postsController.store);
 
 // Update
-router.put("/:id", (req, res) => {
-  const postId = req.params.id;
-  const responseData = {
-    result: `Post ${postId} Update`,
-    success: true,
-  };
-
-  res.json(responseData);
-});
+router.put("/:id", postsController.update);
 
 // Modify
-router.patch("/:id", (req, res) => {
-  const postId = req.params.id;
-  const responseData = {
-    result: `Post ${postId} partial update`,
-    success: true,
-  };
-
-  res.json(responseData);
-});
+router.patch("/:id", postsController.modify);
 
 // Destroy
-router.delete("/:id", (req, res) => {
-  const postId = req.params.id;
-  const responseData = {
-    result: `Post ${postId} delete`,
-    success: true,
-  };
-
-  res.json(responseData);
-});
+router.delete("/:id", postsController.destroy);
 
 module.exports = router;
