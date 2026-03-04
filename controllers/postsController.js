@@ -44,7 +44,16 @@ function show(req, res) {
 }
 
 function store(req, res) {
-  const newPost = req.body;
+  const { title, content, image, tags } = req.body;
+  const newPostId = recipes[recipes.length - 1].id + 1;
+  const newPost = {
+    id: newPostId,
+    title,
+    content,
+    image,
+    tags,
+  };
+
   recipes.push(newPost);
 
   const responseData = {
