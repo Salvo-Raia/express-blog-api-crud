@@ -6,6 +6,8 @@ const appURL = `http://localhost:${port}`;
 
 // Middleware assets statici
 app.use(express.static("public"));
+// Middleware body-parser
+app.use(express.json());
 
 // Routers
 app.use("/posts", postsRouter);
