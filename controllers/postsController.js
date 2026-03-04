@@ -61,8 +61,8 @@ function store(req, res) {
     success: true,
   };
 
-  res.json(responseData);
-  console.log(req.body);
+  res.status(201).json(responseData);
+  console.log(newPost);
 }
 
 function update(req, res) {
