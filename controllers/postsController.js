@@ -44,12 +44,16 @@ function show(req, res) {
 }
 
 function store(req, res) {
+  const newPost = req.body;
+  recipes.push(newPost);
+
   const responseData = {
     result: `Post Creation`,
     success: true,
   };
 
   res.json(responseData);
+  console.log(req.body);
 }
 
 function update(req, res) {
