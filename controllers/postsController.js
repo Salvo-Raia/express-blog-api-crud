@@ -18,7 +18,7 @@ function index(req, res) {
     success: true,
   };
 
-  res.json(responseData);
+  res.status(200).json(responseData);
 }
 
 function show(req, res) {
@@ -40,7 +40,7 @@ function show(req, res) {
     success: true,
   };
 
-  res.json(responseData);
+  res.status(200).json(responseData);
 }
 
 function store(req, res) {
@@ -57,7 +57,8 @@ function store(req, res) {
   recipes.push(newPost);
 
   const responseData = {
-    result: `Post Creation`,
+    message: `Post successfully created`,
+    result: newPost,
     success: true,
   };
 
@@ -66,13 +67,31 @@ function store(req, res) {
 }
 
 function update(req, res) {
-  const postId = req.params.id;
+  const postId = parseInt(req.params.id);
+  const recipe = recipes.find((recipe) => recipe.id === postId);
+
+  if (!recipe) {
+    const responseData = {
+      message: `Recipe ${postId} not found`,
+      success: false,
+    };
+
+    res.status(404).json(responseData);
+  }
+
+  recipe.title = req.body.title;
+  recipe.content = req.body.content;
+  recipe.image = req.body.image;
+  recipe.tags = req.body.tags;
+
   const responseData = {
-    result: `Post ${postId} Update`,
+    message: `Post ${postId} successfully updated`,
+    result: recipe,
     success: true,
   };
 
-  res.json(responseData);
+  res.status(200).json(responseData);
+  console.log(recipe);
 }
 
 function modify(req, res) {
