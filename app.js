@@ -1,4 +1,5 @@
 const express = require("express");
+const notFoundMiddleware = require("./middlewares/notFoundMiddleware");
 const postsRouter = require("./routers/posts");
 const app = express();
 const port = 3000;
@@ -11,6 +12,9 @@ app.use(express.json());
 
 // Routers
 app.use("/posts", postsRouter);
+
+// Error middlewares
+app.use(notFoundMiddleware);
 
 // Avvio server
 app.listen(port, () => {
