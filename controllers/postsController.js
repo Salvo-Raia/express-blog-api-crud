@@ -1,6 +1,9 @@
 const recipes = require("../data/recipes");
 
 function index(req, res) {
+  // Questo console log simula un errore per testare errorHandlerMiddleware.
+  // console.log(simulazioneErrore);
+
   let filteredRecipes = recipes;
   const tagsSearchFilter = req.query.search;
 
@@ -94,6 +97,7 @@ function update(req, res) {
   console.log(recipe);
 }
 
+//TODO: logica patch
 function modify(req, res) {
   const postId = req.params.id;
   const responseData = {
