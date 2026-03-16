@@ -97,15 +97,30 @@ function update(req, res) {
   console.log(recipe);
 }
 
-//TODO: logica patch
 function modify(req, res) {
-  const postId = req.params.id;
+  const postId = parseInt(req.params.id);
+  const recipe = recipes.find((recipe) => recipe.id === postId);
+
+  if (!recipe) {
+    const responseData = {
+      message: `Recipe ${postId} not found`,
+      success: false,
+    };
+    return res.status(404).json(responseData);
+  }
+
+  if (title) recipe.title = req.body.title;
+  if (content) recipe.content = req.body.content;
+  if (image) recipe.image = req.body.image;
+  if (tags) recipe.tags = req.body.tags;
+
   const responseData = {
-    result: `Post ${postId} partial update`,
+    message: `Post ${postId} partial update`,
+    result: recipe,
     success: true,
   };
 
-  return res.json(responseData);
+  res.json(responseData);
 }
 
 function destroy(req, res) {
