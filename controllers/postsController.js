@@ -34,7 +34,7 @@ function show(req, res) {
       success: false,
     };
 
-    res.status(404).json(responseData);
+    return res.status(404).json(responseData);
   }
 
   const responseData = {
@@ -79,7 +79,7 @@ function update(req, res) {
       success: false,
     };
 
-    res.status(404).json(responseData);
+    return res.status(404).json(responseData);
   }
 
   recipe.title = req.body.title;
@@ -105,7 +105,7 @@ function modify(req, res) {
     success: true,
   };
 
-  res.json(responseData);
+  return res.json(responseData);
 }
 
 function destroy(req, res) {
@@ -118,7 +118,7 @@ function destroy(req, res) {
       success: false,
     };
 
-    res.status(404).json(responseData);
+    return res.status(404).json(responseData);
   }
 
   recipes.splice(recipes.indexOf(recipe), 1);
