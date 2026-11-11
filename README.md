@@ -1,73 +1,152 @@
-# Esercizio: Express Blog - API CRUD (parte 1)
-Nome repo: `express-blog-api-crud`
+![Boolean Tech Academy](https://img.shields.io/badge/Boolean_Tech_Academy-001632?style=for-the-badge)
 
-## Consegna giorno 1
+# 🎓 Exercise 45/50 - Express Blog API CRUD
 
-### Milestone 1
+Build a complete REST API for a personal blog using Node.js and Express. Refactor the application with controllers, implement all CRUD operations to manage blog posts, handle incoming request data and introduce dedicated middlewares for errors and undefined routes.
 
-Come prima cosa, creiamo un controller per i nostri post, in una cartella `controllers`.
+## 📌 Project Overview
 
-All’interno, prepariamo tutte le funzioni necessarie e copiamo in ciascuna la logica delle funzioni che attualmente si trovano nel router (al momento restituiscono solo dei messaggi).
+| Property | Details |
+|:--|:--|
+| Repository | `express-blog-api-crud` |
+| Category | Boolean Tech Academy |
+| Type | Exercise |
+| Exercise | 45/50 |
 
-Poi torniamo sul file delle rotte. Qui importiamo le funzioni dichiarate nel controller e le associamo alle varie rotte, come visto in classe.
+## 🎯 Assignment
 
-Testiamo su postman se chiamando gli endpoint riceviamo effettivamente le stesse risposte che avevamo prima.
+Extend the Express blog application by implementing the complete CRUD functionality, organizing the backend architecture and improving API error handling.
 
-Se tutto funziona, passiamo alla prossima milestone
+### Part 1 - Controllers and CRUD: Read & Delete
 
-### Milestone 2
+#### Milestone 1 - Create the Posts Controller
 
-Per iniziare, creiamo una cartella `data` in cui creare un file che contenga ed esporti l’array di posts che trovate in allegato. Importiamo questo file in cima al controller.
+Create a `controllers` folder and add a controller for the posts resource.
 
-Ora passiamo ad implementare le logiche delle nostre CRUD:
+- Move the existing route logic into dedicated controller functions.
+- Prepare a function for each CRUD operation.
+- Import the controller functions into the posts router.
+- Associate each function with its corresponding route.
+- Test all endpoints with Postman to ensure they return the same responses as before.
 
-* Index dovrà restituire la lista dei post in formato JSON
-* Show dovrà restituire un singolo post in formato JSON
-* Destroy dovrà eliminare un singolo post dalla lista, stampare nel terminale (console.log) la lista aggiornata, e rispondere con uno stato 204 e nessun contenuto.
+#### Milestone 2 - Create the Posts Data Source
 
-**Bonus**
-Implementare un filtro di ricerca nella index che mostri solo i post che hanno un determinato Tag
-In Show e Destroy, controllare se il parametro si riferisce ad un post esistente, in caso contrario, rispondere con uno stato 404 e un messaggio d’errore, sempre in formato JSON.
+- Create a `data` folder.
+- Add a file containing the provided posts array.
+- Export the array and import it into the posts controller.
 
-## Consegna giorno 2
+Implement the following operations:
 
-### Milestone 1
+**Index**
+- Return the complete list of posts in JSON format.
 
-Per iniziare, andiamo su Postman e prepariamo una nuova chiamata verso la nostra rotta store.
+**Show**
+- Return a single post in JSON format.
 
-* Impostiamo il verbo e l’endpoint corretti
-* Selezioniamo il tab body e scegliamo il formato raw e JSON
-* Inseriamo come corpo della nostra request un oggetto che rappresenti un nuovo post
+**Destroy**
+- Remove a post from the array.
+- Print the updated posts list to the terminal using `console.log`.
+- Respond with HTTP status `204 No Content`, without returning a response body.
 
-Nota: se vogliamo avere delle immagini, inventiamole pure.
+#### Bonus - Search and Error Handling
 
-Nota: ricordiamo che non bisogna passare l’id quando si crea una nuova risorsa: sarà il server (con l’aiuto del database) a fornirlo.
+- Add a search filter to the Index route to return only posts containing a specific tag.
+- In Show and Destroy, check whether the requested post exists.
+- If the post does not exist, return HTTP status `404 Not Found` with a JSON error message.
 
-### Milestone 2
+### Part 2 - Create & Update
 
-Impostiamo il body-parser per far sì che la nostra app riesca a decifrare il request body.
+#### Milestone 3 - Prepare the Store Request
 
-Poi, all’interno della rotta Store, stampiamo nel terminale i dati in arrivo, grazie a un console.log
+Using Postman, create a new request for the Store route.
 
-### Milestone 3
+- Set the correct HTTP method and endpoint.
+- Open the Body tab.
+- Select `raw` and choose `JSON` as the format.
+- Provide a JSON object representing a new blog post.
 
-Implementiamo quindi la logica per aggiungere un nuovo post al nostro blog, e prepariamo la risposta adeguata.
+**Important:** Do not include an `id` when creating a new resource. The server is responsible for assigning it.
 
-Testiamolo con postman.
+You can use fictional image URLs if you want to include images.
 
-### Milestone 4
+#### Milestone 4 - Configure Request Body Parsing
 
-Ripetiamo il procedimento per la rotta di Update, in modo da avere la possibilità di modificare le nostre risorse.
+Configure body parsing so that the Express application can read incoming request bodies.
 
-Bonus
-* Quelli del giorno prima, se non già fatti
-* In Update, controllare se il parametro si riferisce ad un post esistente, in caso contrario, rispondere con uno stato 404 e un messaggio d’errore, sempre in formato JSON.
+Inside the Store route, print the received data to the terminal using `console.log` to verify that the request body is correctly parsed.
 
-## Consegna giorno 3 
+#### Milestone 5 - Implement Store
 
-Express Blog - Middlewares
+Implement the logic to add a new post to the blog.
 
-Dopo aver completato tutte le operazioni CRUD, completiamo le nostre API inserendo un middleware per la gestione delle rotte non registrate e uno per la gestione degli errori.
+- Retrieve the data sent in the request body.
+- Create a new post.
+- Add it to the posts array.
+- Return an appropriate response.
 
-* Se viene chiamato un endpoint inesistente, un middleware dovrà rispondere un messaggio e uno status appropriato.
-* Se viene generato un errore, un middleware si occuperà di rispondere con un messaggio e uno status appropriato.
+Test the operation using Postman.
+
+#### Milestone 6 - Implement Update
+
+Repeat the process for the Update route to allow existing posts to be modified.
+
+- Retrieve the post identifier from the request parameters.
+- Read the updated data from the request body.
+- Apply the changes to the corresponding post.
+- Return an appropriate response.
+
+Test the operation using Postman.
+
+#### Bonus - Additional Validation
+
+Complete any bonuses from Part 1 that have not yet been implemented.
+
+Additionally, in Update:
+
+- Check whether the requested post exists.
+- If it does not exist, return HTTP status `404 Not Found` with a JSON error message.
+
+### Part 3 - Middlewares
+
+#### Milestone 7 - Handle Undefined Routes
+
+Create a middleware to handle requests to endpoints that have not been registered.
+
+- Detect requests to undefined routes.
+- Return an appropriate HTTP status.
+- Provide a descriptive response message.
+
+#### Milestone 8 - Handle Errors
+
+Create a dedicated error-handling middleware.
+
+- Catch errors generated by the application.
+- Return an appropriate HTTP status.
+- Provide a descriptive error message.
+
+Complete the API by integrating both middlewares into the Express application.
+
+## 🛠️ Technologies
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white)
+![npm](https://img.shields.io/badge/npm-CB3837?style=flat-square&logo=npm&logoColor=white)
+![Express](https://img.shields.io/badge/Express-000000?style=flat-square&logo=express&logoColor=white)
+
+## 💡 What I Learned
+
+- Organizing an Express application using controllers and routers.
+- Separating application logic from route definitions.
+- Managing and exporting structured data across modules.
+- Implementing the complete CRUD workflow.
+- Handling HTTP methods and REST API conventions.
+- Reading request parameters and parsing JSON request bodies.
+- Creating, retrieving, updating and deleting resources.
+- Filtering data using query parameters.
+- Managing HTTP status codes and JSON error responses.
+- Building custom Express middlewares.
+- Handling undefined routes and application errors.
+- Testing API requests and responses with Postman.
+
+## ©️ Credits
+
+Exercise assigned by **Boolean Tech Academy** as part of the Web Development course - Class 152 - Year 2025-2026
