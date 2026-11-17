@@ -1,6 +1,6 @@
-![Boolean Tech Academy](https://img.shields.io/badge/Boolean_Tech_Academy-001632?style=for-the-badge)
+![Static Badge](https://img.shields.io/badge/Boolean_Tech_Academy-1565C0?style=for-the-badge)
 
-# 🎓 Exercise 45/50 - Express Blog API CRUD
+# 🎓 Exercise 45/50: Express Blog API CRUD
 
 Build a complete REST API for a personal blog using Node.js and Express. Refactor the application with controllers, implement all CRUD operations to manage blog posts, handle incoming request data and introduce dedicated middlewares for errors and undefined routes.
 
@@ -48,7 +48,7 @@ Implement the following operations:
 - Print the updated posts list to the terminal using `console.log`.
 - Respond with HTTP status `204 No Content`, without returning a response body.
 
-#### Bonus - Search and Error Handling
+### ⭐ Bonus
 
 - Add a search filter to the Index route to return only posts containing a specific tag.
 - In Show and Destroy, check whether the requested post exists.
@@ -97,7 +97,7 @@ Repeat the process for the Update route to allow existing posts to be modified.
 
 Test the operation using Postman.
 
-#### Bonus - Additional Validation
+### ⭐ Bonus
 
 Complete any bonuses from Part 1 that have not yet been implemented.
 
@@ -127,10 +127,7 @@ Create a dedicated error-handling middleware.
 Complete the API by integrating both middlewares into the Express application.
 
 ## 🛠️ Technologies
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
-![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white)
-![npm](https://img.shields.io/badge/npm-CB3837?style=flat-square&logo=npm&logoColor=white)
-![Express](https://img.shields.io/badge/Express-000000?style=flat-square&logo=express&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black) ![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white) ![npm](https://img.shields.io/badge/npm-CB3837?style=flat-square&logo=npm&logoColor=white) ![Express](https://img.shields.io/badge/Express-000000?style=flat-square&logo=express&logoColor=white)
 
 ## 💡 What I Learned
 
@@ -149,4 +146,4 @@ Complete the API by integrating both middlewares into the Express application.
 
 ## ©️ Credits
 
-Exercise assigned by **Boolean Tech Academy** as part of the Web Development course - Class 152 - Year 2025-2026
+Exercise assigned by **Boolean Tech Academy** as part of the Web Development course (Class 152, A.Y. 2025–2026).
