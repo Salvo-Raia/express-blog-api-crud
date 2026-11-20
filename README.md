@@ -1,25 +1,22 @@
 ![Static Badge](https://img.shields.io/badge/Boolean_Tech_Academy-1565C0?style=for-the-badge)
 
-# 🎓 Exercise 45/50: Express Blog API CRUD
+# Exercise 45/50: Express Blog API CRUD
 
 Build a complete REST API for a personal blog using Node.js and Express. Refactor the application with controllers, implement all CRUD operations to manage blog posts, handle incoming request data and introduce dedicated middlewares for errors and undefined routes.
 
-## 📌 Project Overview
+## Project overview
 
-| Property | Details |
-|:--|:--|
-| Repository | `express-blog-api-crud` |
-| Category | Boolean Tech Academy |
-| Type | Exercise |
-| Exercise | 45/50 |
+| Repository | Project | Category | Main Focus | Exercise |
+|:--|:--|:--|:--|:--|
+| express-blog-api-crud | Express Blog API CRUD | Exercise | Express, controllers, CRUD operations & Middleware | 45/50 |
 
-## 🎯 Assignment
+## Assignment
 
 Extend the Express blog application by implementing the complete CRUD functionality, organizing the backend architecture and improving API error handling.
 
 ### Part 1 - Controllers and CRUD: Read & Delete
 
-#### Milestone 1 - Create the Posts Controller
+#### Milestone 1: Create the Posts Controller
 
 Create a `controllers` folder and add a controller for the posts resource.
 
@@ -29,7 +26,7 @@ Create a `controllers` folder and add a controller for the posts resource.
 - Associate each function with its corresponding route.
 - Test all endpoints with Postman to ensure they return the same responses as before.
 
-#### Milestone 2 - Create the Posts Data Source
+#### Milestone 2: Create the Posts Data Source
 
 - Create a `data` folder.
 - Add a file containing the provided posts array.
@@ -48,7 +45,7 @@ Implement the following operations:
 - Print the updated posts list to the terminal using `console.log`.
 - Respond with HTTP status `204 No Content`, without returning a response body.
 
-### ⭐ Bonus
+#### Bonus challenge
 
 - Add a search filter to the Index route to return only posts containing a specific tag.
 - In Show and Destroy, check whether the requested post exists.
@@ -56,7 +53,7 @@ Implement the following operations:
 
 ### Part 2 - Create & Update
 
-#### Milestone 3 - Prepare the Store Request
+#### Milestone 3: Prepare the Store Request
 
 Using Postman, create a new request for the Store route.
 
@@ -69,13 +66,13 @@ Using Postman, create a new request for the Store route.
 
 You can use fictional image URLs if you want to include images.
 
-#### Milestone 4 - Configure Request Body Parsing
+#### Milestone 4: Configure Request Body Parsing
 
 Configure body parsing so that the Express application can read incoming request bodies.
 
 Inside the Store route, print the received data to the terminal using `console.log` to verify that the request body is correctly parsed.
 
-#### Milestone 5 - Implement Store
+#### Milestone 5: Implement Store
 
 Implement the logic to add a new post to the blog.
 
@@ -86,7 +83,7 @@ Implement the logic to add a new post to the blog.
 
 Test the operation using Postman.
 
-#### Milestone 6 - Implement Update
+#### Milestone 6: Implement Update
 
 Repeat the process for the Update route to allow existing posts to be modified.
 
@@ -97,7 +94,7 @@ Repeat the process for the Update route to allow existing posts to be modified.
 
 Test the operation using Postman.
 
-### ⭐ Bonus
+#### Bonus challenge
 
 Complete any bonuses from Part 1 that have not yet been implemented.
 
@@ -108,7 +105,7 @@ Additionally, in Update:
 
 ### Part 3 - Middlewares
 
-#### Milestone 7 - Handle Undefined Routes
+#### Milestone 7: Handle Undefined Routes
 
 Create a middleware to handle requests to endpoints that have not been registered.
 
@@ -116,7 +113,7 @@ Create a middleware to handle requests to endpoints that have not been registere
 - Return an appropriate HTTP status.
 - Provide a descriptive response message.
 
-#### Milestone 8 - Handle Errors
+#### Milestone 8: Handle Errors
 
 Create a dedicated error-handling middleware.
 
@@ -126,10 +123,13 @@ Create a dedicated error-handling middleware.
 
 Complete the API by integrating both middlewares into the Express application.
 
-## 🛠️ Technologies
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black) ![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white) ![npm](https://img.shields.io/badge/npm-CB3837?style=flat-square&logo=npm&logoColor=white) ![Express](https://img.shields.io/badge/Express-000000?style=flat-square&logo=express&logoColor=white)
+## Technologies
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black) 
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white) 
+![npm](https://img.shields.io/badge/npm-CB3837?style=flat-square&logo=npm&logoColor=white) 
+![Express](https://img.shields.io/badge/Express-000000?style=flat-square&logo=express&logoColor=white)
 
-## 💡 What I Learned
+## What I learned
 
 - Organizing an Express application using controllers and routers.
 - Separating application logic from route definitions.
@@ -144,6 +144,6 @@ Complete the API by integrating both middlewares into the Express application.
 - Handling undefined routes and application errors.
 - Testing API requests and responses with Postman.
 
-## ©️ Credits
+## Credits
 
-Exercise assigned by **Boolean Tech Academy** as part of the Web Development course (Class 152, A.Y. 2025–2026).
+Exercise assigned by **Boolean Tech Academy** as part of the Web Development course (Class 152, A.Y. 2025-2026).
