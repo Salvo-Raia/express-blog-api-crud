@@ -8,7 +8,7 @@ Build a complete REST API for a personal blog using Node.js and Express. Refacto
 
 | Repository | Project | Category | Main Focus | Exercise |
 |:--|:--|:--|:--|:--|
-| express-blog-api-crud | Express Blog API CRUD | Exercise | Express, controllers, CRUD operations & Middleware | 45/50 |
+| express-blog-api-crud | Express Blog API CRUD | Exercise | Express, controllers & Middleware | 45/50 |
 
 ## Assignment
 
@@ -16,7 +16,7 @@ Extend the Express blog application by implementing the complete CRUD functional
 
 ### Part 1 - Controllers and CRUD: Read & Delete
 
-#### Milestone 1: Create the Posts Controller
+#### Milestone 1: Create the posts controller
 
 Create a `controllers` folder and add a controller for the posts resource.
 
@@ -26,13 +26,13 @@ Create a `controllers` folder and add a controller for the posts resource.
 - Associate each function with its corresponding route.
 - Test all endpoints with Postman to ensure they return the same responses as before.
 
-#### Milestone 2: Create the Posts Data Source
+#### Milestone 2: Create the posts data source
 
 - Create a `data` folder.
 - Add a file containing the provided posts array.
 - Export the array and import it into the posts controller.
 
-Implement the following operations:
+Implement the following operations.
 
 **Index**
 - Return the complete list of posts in JSON format.
@@ -47,13 +47,15 @@ Implement the following operations:
 
 #### Bonus challenge
 
+Try to implement the following additional improvements and features.
+
 - Add a search filter to the Index route to return only posts containing a specific tag.
 - In Show and Destroy, check whether the requested post exists.
 - If the post does not exist, return HTTP status `404 Not Found` with a JSON error message.
 
 ### Part 2 - Create & Update
 
-#### Milestone 3: Prepare the Store Request
+#### Milestone 3: Prepare the store request
 
 Using Postman, create a new request for the Store route.
 
@@ -66,13 +68,13 @@ Using Postman, create a new request for the Store route.
 
 You can use fictional image URLs if you want to include images.
 
-#### Milestone 4: Configure Request Body Parsing
+#### Milestone 4: Configure request body parsing
 
 Configure body parsing so that the Express application can read incoming request bodies.
 
 Inside the Store route, print the received data to the terminal using `console.log` to verify that the request body is correctly parsed.
 
-#### Milestone 5: Implement Store
+#### Milestone 5: Implement store
 
 Implement the logic to add a new post to the blog.
 
@@ -83,7 +85,7 @@ Implement the logic to add a new post to the blog.
 
 Test the operation using Postman.
 
-#### Milestone 6: Implement Update
+#### Milestone 6: Implement update
 
 Repeat the process for the Update route to allow existing posts to be modified.
 
@@ -98,14 +100,14 @@ Test the operation using Postman.
 
 Complete any bonuses from Part 1 that have not yet been implemented.
 
-Additionally, in Update:
+Additionally, in update:
 
 - Check whether the requested post exists.
 - If it does not exist, return HTTP status `404 Not Found` with a JSON error message.
 
 ### Part 3 - Middlewares
 
-#### Milestone 7: Handle Undefined Routes
+#### Milestone 7: Handle undefined routes
 
 Create a middleware to handle requests to endpoints that have not been registered.
 
@@ -113,7 +115,7 @@ Create a middleware to handle requests to endpoints that have not been registere
 - Return an appropriate HTTP status.
 - Provide a descriptive response message.
 
-#### Milestone 8: Handle Errors
+#### Milestone 8: Handle errors
 
 Create a dedicated error-handling middleware.
 
