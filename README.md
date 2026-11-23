@@ -8,7 +8,7 @@ Build a complete REST API for a personal blog using Node.js and Express. Refacto
 
 | Repository | Project | Category | Main Focus | Exercise |
 |:--|:--|:--|:--|:--|
-| express-blog-api-crud | Express Blog API CRUD | Exercise | Express, CRUD operations, controllers, middleware | 45/50 |
+| express-blog-api-crud | Express Blog API CRUD | Exercise | Express, CRUD operations, controllers, middlewares | 45/50 |
 
 ## Assignment
 
