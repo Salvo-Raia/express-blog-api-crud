@@ -8,13 +8,13 @@ Build a complete REST API for a personal blog using Node.js and Express. Refacto
 
 | Repository | Project | Category | Main Focus | Exercise |
 |:--|:--|:--|:--|:--|
-| express-blog-api-crud | Express Blog API CRUD | Exercise | Express, CRUD operations, controllers & Middleware | 45/50 |
+| express-blog-api-crud | Express Blog API CRUD | Exercise | Express, CRUD operations, controllers, middleware | 45/50 |
 
 ## Assignment
 
 Extend the Express blog application by implementing the complete CRUD functionality, organizing the backend architecture and improving API error handling.
 
-### Part 1 - Controllers and CRUD: Read & Delete
+### Part 1 - Controllers and CRUD: Read and Delete
 
 #### Milestone 1: Create the posts controller
 
@@ -35,12 +35,15 @@ Create a `controllers` folder and add a controller for the posts resource.
 Implement the following operations.
 
 **Index**
+
 - Return the complete list of posts in JSON format.
 
 **Show**
+
 - Return a single post in JSON format.
 
 **Destroy**
+
 - Remove a post from the array.
 - Print the updated posts list to the terminal using `console.log`.
 - Respond with HTTP status `204 No Content`, without returning a response body.
@@ -53,7 +56,7 @@ Try to implement the following additional improvements and features.
 - In Show and Destroy, check whether the requested post exists.
 - If the post does not exist, return HTTP status `404 Not Found` with a JSON error message.
 
-### Part 2 - Create & Update
+### Part 2 - Create and Update
 
 #### Milestone 3: Prepare the store request
 
@@ -126,9 +129,10 @@ Create a dedicated error-handling middleware.
 Complete the API by integrating both middlewares into the Express application.
 
 ## Technologies
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black) 
-![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white) 
-![npm](https://img.shields.io/badge/npm-CB3837?style=flat-square&logo=npm&logoColor=white) 
+
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white)
+![npm](https://img.shields.io/badge/npm-CB3837?style=flat-square&logo=npm&logoColor=white)
 ![Express](https://img.shields.io/badge/Express-000000?style=flat-square&logo=express&logoColor=white)
 
 ## What I learned
