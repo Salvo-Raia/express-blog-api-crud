@@ -40,11 +40,7 @@ With the posts data source in place, implement the following operations.
 
 **Show:** Return a single post in JSON format.
 
-**Destroy:**
-
-- Remove a post from the array.
-- Print the updated posts list to the terminal using `console.log`.
-- Respond with HTTP status `204 No Content`, without returning a response body.
+**Destroy:** Remove a post from the array, print the updated posts list to the terminal using `console.log` and respond with HTTP status `204 No Content`, without returning a response body.
 
 #### Bonus challenge
 
