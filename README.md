@@ -16,6 +16,8 @@ Extend the Express blog application by implementing the complete CRUD functional
 
 ### Part 1 - Controllers and CRUD: Read and Delete
 
+Organize the existing backend into dedicated controllers and implement the read and delete operations.
+
 #### Milestone 1: Create the posts controller
 
 Create a `controllers` folder and add a controller for the posts resource.
