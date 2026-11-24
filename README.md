@@ -56,6 +56,8 @@ Try to implement the following additional improvements and features.
 
 ### Part 2 - Create and Update
 
+Extend the API with the functionality required to create and update blog posts.
+
 #### Milestone 3: Prepare the store request
 
 Using Postman, create a new request for the Store route.
@@ -107,6 +109,8 @@ Additionally, in update:
 - If it does not exist, return HTTP status `404 Not Found` with a JSON error message.
 
 ### Part 3 - Middlewares
+
+Complete the API by adding middleware to handle undefined routes and application errors.
 
 #### Milestone 7: Handle undefined routes
 
