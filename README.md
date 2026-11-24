@@ -34,16 +34,11 @@ Create a `controllers` folder and add a controller for the posts resource.
 
 Implement the following operations.
 
-**Index**
+**Index:** Return the complete list of posts in JSON format.
 
-- Return the complete list of posts in JSON format.
+**Show:** Return a single post in JSON format.
 
-**Show**
-
-- Return a single post in JSON format.
-
-**Destroy**
-
+**Destroy:**
 - Remove a post from the array.
 - Print the updated posts list to the terminal using `console.log`.
 - Respond with HTTP status `204 No Content`, without returning a response body.
